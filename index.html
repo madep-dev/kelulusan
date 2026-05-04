@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pengumuman Kelulusan SMK</title>
+
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            display: ["Playfair Display", "serif"],
+                            body: ["DM Sans", "sans-serif"],
+                        },
+                        colors: {
+                            gold: {
+                                DEFAULT: "#C9A84C",
+                                light: "#E8C97A",
+                                dark: "#9A7630",
+                            },
+                            navy: {
+                                DEFAULT: "#0F1F3D",
+                                light: "#1A3060",
+                                dark: "#070F1E",
+                            },
+                            cream: "#FAF6ED",
+                        },
+                        keyframes: {
+                            fadeUp: {
+                                "0%": {
+                                    opacity: 0,
+                                    transform: "translateY(24px)",
+                                },
+                                "100%": {
+                                    opacity: 1,
+                                    transform: "translateY(0)",
+                                },
+                            },
+                            fadeIn: {
+                                "0%": { opacity: 0 },
+                                "100%": { opacity: 1 },
+                            },
+                            shimmer: {
+                                "0%,100%": { opacity: 1 },
+                                "50%": { opacity: 0.5 },
+                            },
+                            pop: {
+                                "0%": { transform: "scale(0.85)", opacity: 0 },
+                                "70%": { transform: "scale(1.04)" },
+                                "100%": { transform: "scale(1)", opacity: 1 },
+                            },
+                        },
+                        animation: {
+                            "fade-up": "fadeUp 0.6s ease both",
+                            "fade-in": "fadeIn 0.5s ease both",
+                            shimmer: "shimmer 1.6s ease infinite",
+                            pop: "pop 0.5s cubic-bezier(.34,1.56,.64,1) both",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <link rel="stylesheet" href="./src/app.css" />
+    </head>
+
+    <body
+        class="bg-pattern min-h-screen flex flex-col items-center justify-center px-4 py-12"
+    >
+        <!-- Header -->
+        <div
+            class="text-center mb-10 animate-fade-up"
+            style="animation-delay: 0s"
+        >
+            <!-- Logo / Ikon -->
+            <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-5"
+                style="
+                    background: rgba(201, 168, 76, 0.15);
+                    border: 1px solid rgba(201, 168, 76, 0.4);
+                "
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-8 h-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#C9A84C"
+                    stroke-width="1.5"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                    />
+                </svg>
+            </div>
+
+            <p
+                class="text-gold text-xs font-body font-semibold tracking-[0.3em] uppercase mb-2"
+            >
+                Pengumuman Resmi
+            </p>
+            <h1
+                class="font-display text-2xl md:text-3xl text-cream leading-tight"
+            >
+                Kelulusan Siswa
+            </h1>
+            <p class="font-display text-gold text-2xl md:text-3xl mt-1">
+                SMK Mitra Karya Mandiri
+            </p>
+            <p class="font-display text-gold text-lg md:text-xl mt-1">
+                Tahun Pelajaran 2025/2026
+            </p>
+
+            <div class="divider-gold w-48 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Card Utama -->
+        <div
+            class="card-gold rounded-2xl w-full max-w-md p-8 animate-fade-up"
+            style="
+                animation-delay: 0.15s;
+                background: rgba(15, 31, 61, 0.85);
+                backdrop-filter: blur(16px);
+            "
+        >
+            <h2 class="font-body text-cream text-base font-semibold mb-1">
+                Cek Status Kelulusan
+            </h2>
+            <p class="text-cream/50 text-sm mb-6">
+                Masukkan Nomor NISN Anda untuk melihat hasil pengumuman.
+            </p>
+
+            <!-- Form -->
+            <div class="space-y-4">
+                <div>
+                    <label
+                        class="block text-gold/80 text-xs font-semibold tracking-widest uppercase mb-2"
+                        >Nomor NISN</label
+                    >
+                    <input
+                        id="nisn-input"
+                        type="text"
+                        inputmode="numeric"
+                        maxlength="10"
+                        placeholder="Contoh: 0012345678"
+                        class="input-nisn w-full rounded-xl px-4 py-3.5 text-base font-body"
+                        onkeydown="if (event.key === 'Enter') cekKelulusan();"
+                    />
+                </div>
+
+                <button
+                    onclick="cekKelulusan()"
+                    class="btn-gold w-full rounded-xl py-3.5 font-body font-semibold text-navy text-sm tracking-wide"
+                >
+                    Cek Kelulusan
+                </button>
+            </div>
+
+            <!-- Loading -->
+            <div
+                id="loading"
+                class="hidden mt-6 flex items-center justify-center gap-2 text-gold/70 text-sm"
+            >
+                <span class="dot">●</span><span class="dot">●</span
+                ><span class="dot">●</span>
+                <span class="ml-2">Memuat data...</span>
+            </div>
+
+            <!-- Result -->
+            <div id="result" class="hidden mt-6"></div>
+        </div>
+
+        <!-- Footer -->
+        <p
+            class="mt-8 text-cream/25 text-xs text-center animate-fade-in font-body"
+            style="animation-delay: 0.3s"
+        >
+            Jika ada pertanyaan, silakan hubungi pihak sekolah.
+            <br class="sm:hidden" />Hasil bersifat resmi dan final.
+        </p>
+
+        <script src="./src/app.js"></script>
+    </body>
+</html>
